@@ -1,0 +1,223 @@
+/* Базовые стили */
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+
+/* Вспомогательные классы */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    width: 100%;
+}
+
+
+/* Стили для заголовков */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-heading);
+    font-weight: 700;
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--gap-md);
+}
+
+.section-title {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--gap-lg);
+    text-align: center;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.btn:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn--secondary {
+    background-color: var(--color-secondary);
+}
+
+/* Сетка */
+.grid {
+    display: grid;
+    gap: var(--gap-lg);
+}
+
+@media (min-width: 768px) {
+    .grid--columns-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid--columns-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Flex контейнер */
+.flex {
+    display: flex;
+    gap: var(--gap-md);
+}
+
+.flex--column {
+    flex-direction: column;
+}
+
+.flex--center {
+    align-items: center;
+    justify-content: center;
+}
+
+/* Адаптивные изображения */
+.img-responsive {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.header__wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav__list {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Стили для header__wrapper */
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+/* Стили для навигации */
+.nav__list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+a:hover, .nav__link:hover {
+    color: var(--color-primary);
+}
+
+.header__actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header__btn {
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    font-size: var(--font-size-base);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    border: 2px solid transparent;
+    background-color: transparent;
+    white-space: nowrap;
+}
+
+.header__btn--outline {
+    border-color: var(--color-text);
+    color: var(--color-text);
+    background-color: transparent;
+}
+
+.header__btn--outline:hover {
+    background-color: var(--color-text);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 1023px) {
+    .nav__list {
+        gap: 1rem;
+    }
+
+    .header__btn {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .header__wrapper {
+        flex-wrap: wrap;
+    }
+
+    .nav {
+        order: 3;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .nav__list {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 767px) {
+    .mobile-hidden {
+        display: none !important;
+    }
+
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .tablet-hidden {
+        display: none !important;
+    }
+}

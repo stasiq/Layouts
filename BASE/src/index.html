@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Описание сайта">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Подключение шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Пример: <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"> -->
+
+    <title>Название проекта</title>
+</head>
+<body class="page__body">
+<!-- Шапка сайта -->
+<header class="header">
+    <div class="container">
+        <div class="header__wrapper">
+            <!-- Логотип -->
+            <div class="logo">
+                <a href="/" aria-label="Логотип">
+                    <img src="assets/img/Logo.png" alt="Jadoo">
+                </a>
+            </div>
+
+            <!-- Навигация -->
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#about" class="nav__link">Destinations</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Hotels</a></li>
+                    <li class="nav__item"><a href="#portfolio" class="nav__link">Flights</a></li>
+                    <li class="nav__item"><a href="#contacts" class="nav__link">Bookings</a></li>
+                    <li class="nav__item"><a href="#contacts" class="nav__link">Login</a></li>
+                </ul>
+            </nav>
+
+            <!-- Кнопка регистрации/авторизации -->
+            <div class="header__actions">
+                <button class="header__btn header__btn--outline" type="button" aria-label="Зарегистрироваться">
+                    Sign up
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Основное содержимое -->
+<main class="main">
+    <div class="container">
+        <!-- Секции будут здесь -->
+        <section class="hero" id="hero">
+            <h1 class="visually-hidden">Главный заголовок сайта</h1>
+            <!-- Контент героя -->
+        </section>
+
+        <section class="about" id="about">
+            <h2 class="section-title">О нас</h2>
+            <!-- Контент секции -->
+        </section>
+
+        <!-- Другие секции -->
+    </div>
+</main>
+
+<!-- Подвал сайта -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+            <p class="footer__copyright">&copy; 2024 Название компании</p>
+            <!-- Другая информация -->
+        </div>
+    </div>
+</footer>
+
+<!-- Скрипты -->
+<script src="js/main.js" defer></script>
+</body>
+</html>
