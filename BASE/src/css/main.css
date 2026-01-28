@@ -94,13 +94,6 @@ h1, h2, h3, h4, h5, h6 {
     object-fit: cover;
 }
 
-
-.header__wrapper {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
 .nav__list {
     display: flex;
     gap: 20px;
@@ -119,11 +112,10 @@ h1, h2, h3, h4, h5, h6 {
     border: 0;
 }
 
-/* Стили для header__wrapper */
 .header__wrapper {
     display: flex;
+    gap: 20px;
     align-items: center;
-    justify-content: space-between;
     padding: 1rem 0;
 }
 
